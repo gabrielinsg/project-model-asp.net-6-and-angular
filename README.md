@@ -50,10 +50,6 @@ Para testar a funcionalidade PWA basta utilizar o script abaixo e acessar a url 
 npm run start-pwa
 ```
 
-Será disponibilizado botão de download no final campo da URL conforme mostrado na imagem.
-
-![Instalação do Angular PWA](/images/angular-pwa-install.png)
-
 ### Backend
 
 TODO: descrição do deploy backend.
@@ -64,6 +60,4 @@ O projeto é privado e confidencial, não está em distribuição, vide a licen�
 
 ## Contato
 
-FITec - <http://www.fitec.org.br>
-
-Link do projeto: <https://github.com/FITecInovacoesTecnologicas/61054>
+Linkedin: https://www.linkedin.com/in/gabriel-de-oliveira-santos-33ab76a3/
