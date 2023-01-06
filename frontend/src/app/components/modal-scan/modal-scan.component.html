@@ -1,0 +1,9 @@
+<div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between center">
+	<h2>{{ title }}</h2>
+	<button mat-icon-button mat-dialog-close>
+		<mat-icon>close</mat-icon>
+	</button>
+</div>
+<mat-dialog-content>
+	<zxing-scanner [formats]="formats" fxFlexAlign="center" (scanSuccess)="onScanSuccess($event)"> </zxing-scanner>
+</mat-dialog-content>

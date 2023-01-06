@@ -1,0 +1,11 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
+  "recommendations": [
+    "angular.ng-template",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "pkief.material-icon-theme",
+    "chr33z.lingua-vscode",
+    "rvest.vs-code-prettier-eslint"
+  ]
+}

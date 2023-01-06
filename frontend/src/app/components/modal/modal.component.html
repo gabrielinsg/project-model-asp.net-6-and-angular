@@ -1,0 +1,13 @@
+<div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between center">
+	<h2>{{ title }}</h2>
+	<button mat-icon-button mat-dialog-close>
+		<mat-icon>close</mat-icon>
+	</button>
+</div>
+<mat-dialog-content>
+	<ng-content select="[form]"></ng-content>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button color="warn" mat-raised-button mat-dialog-close><mat-icon>close</mat-icon> {{ 'btn.cancel' | translate }}</button>
+	<button color="primary" mat-raised-button [disabled]="isValid" (click)="onSubmit()"><mat-icon>done</mat-icon> {{ 'btn.save' | translate }}</button>
+</mat-dialog-actions>

@@ -1,0 +1,13 @@
+<app-modal [title]="'side-menu.station' | translate" [isValid]="!formStation.valid" (eventEmitterSubmit)="onSubmit()">
+	<form [formGroup]="formStation" fxLayout="column" fxLayoutAlign="space-evenly stretch" form>
+		<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="1%">
+			<mat-form-field fxFlex appearance="fill">
+				<mat-label>{{ 'placeholder.name' | translate }}</mat-label>
+				<input matInput type="text" value="" placeholder="{{ 'placeholder.name' | translate }}" formControlName="name" name="name" required />
+				<mat-error>
+					{{ 'hint.mandatory-field' | translate }}
+				</mat-error>
+			</mat-form-field>
+		</div>
+	</form>
+</app-modal>

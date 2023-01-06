@@ -1,0 +1,11 @@
+<div fxLayout="column">
+	<h1>{{ 'side-menu.configuration' | translate }}</h1>
+	<mat-form-field>
+		<mat-label> {{ 'text.select-language' | translate }} </mat-label>
+		<mat-select [(value)]="language" (selectionChange)="changeLanguage()">
+			<mat-option value="pt-BR"> {{ 'text.portuguese' | translate }} </mat-option>
+			<mat-option value="en" disabled>{{ 'text.english' | translate }}</mat-option>
+		</mat-select>
+	</mat-form-field>
+	<mat-slide-toggle [checked]="darkMode" (toggleChange)="changeTheme()">{{ 'text.dark-mode' | translate }} </mat-slide-toggle>
+</div>

@@ -1,0 +1,93 @@
+<app-modal [title]="'side-menu.user' | translate" [isValid]="!formUser.valid" (eventEmitterSubmit)="onSubmit()">
+	<form [formGroup]="formUser" fxLayout="column" fxLayoutAlign="space-evenly stretch" form>
+		<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="1%">
+			<mat-form-field fxFlex>
+				<input
+					matInput
+					type="text"
+					value=""
+					placeholder="{{ 'placeholder.first-name' | translate }}"
+					formControlName="firstName"
+					name="firstName"
+					required
+				/>
+				<mat-error>
+					{{ 'hint.mandatory-field' | translate }}
+				</mat-error>
+			</mat-form-field>
+			<mat-form-field fxFlex>
+				<mat-label>{{ 'placeholder.name' | translate }}</mat-label>
+				<input
+					matInput
+					type="text"
+					value=""
+					placeholder="{{ 'placeholder.last-name' | translate }}"
+					formControlName="lastName"
+					name="lastName"
+					required
+				/>
+				<mat-error>
+					{{ 'hint.mandatory-field' | translate }}
+				</mat-error>
+			</mat-form-field>
+			<mat-form-field fxFlex>
+				<input
+					matInput
+					type="text"
+					value=""
+					placeholder="{{ 'placeholder.user' | translate }}"
+					formControlName="username"
+					name="username"
+					autocomplete="new-username"
+					required
+				/>
+				<mat-error>
+					{{ 'hint.mandatory-field' | translate }}
+				</mat-error>
+			</mat-form-field>
+		</div>
+		<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="1%">
+			<mat-form-field fxFlex>
+				<mat-label>{{ 'text.role' | translate }}</mat-label>
+				<mat-icon matPrefix>badge</mat-icon>
+				<mat-select formControlName="role" name="role" [(value)]="formUser.value.role">
+					<mat-option value="ADMINISTRATOR">{{ 'text.administrator' | translate }}</mat-option>
+					<mat-option value="ENGINEER">{{ 'text.engineer' | translate }}</mat-option>
+					<mat-option value="OPERATOR">{{ 'text.operator' | translate }}</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<mat-form-field fxFlex>
+				<input
+					matInput
+					type="password"
+					value=""
+					placeholder="{{ 'placeholder.password' | translate }}"
+					formControlName="passwordHash"
+					name="passwordHash"
+					autocomplete="passwordHash"
+					required
+				/>
+				<mat-icon matPrefix>lock</mat-icon>
+				<mat-error>
+					{{ 'hint.mandatory-field' | translate }}
+				</mat-error>
+			</mat-form-field>
+			<mat-form-field fxFlex>
+				<input
+					matInput
+					type="password"
+					value=""
+					placeholder="{{ 'placeholder.confirmPassword' | translate }}"
+					formControlName="confirmPasswordHash"
+					name="confirmPasswordHash"
+					autocomplete="confirmPasswordHash"
+					required
+				/>
+				<mat-icon matPrefix>lock_outline</mat-icon>
+				<mat-error>
+					{{ 'hint.mandatory-field' | translate }}
+				</mat-error>
+			</mat-form-field>
+		</div>
+	</form>
+</app-modal>

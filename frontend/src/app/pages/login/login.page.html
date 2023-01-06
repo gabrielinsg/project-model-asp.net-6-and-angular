@@ -1,0 +1,45 @@
+<mat-card color="primary" fxLayout="column" fxLayoutAlign="space-evenly center" fxFill style="position: absolute">
+	<mat-card class="info-card mat-elevation-z8" fxLayout="column" fxLayoutAlign="center stretch">
+		<img src="assets/logo.png" alt="Brasil Componentes" />
+		<mat-card-title fxFlexAlign="center">Login</mat-card-title>
+		<mat-card-content>
+			<form [formGroup]="formLogin" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="space-evenly stretch">
+				<mat-form-field>
+					<input
+						matInput
+						type="text"
+						class="form-control"
+						value=""
+						placeholder="{{ 'placeholder.user' | translate }}"
+						formControlName="username"
+						name="username"
+						required
+					/>
+					<mat-icon matPrefix>person</mat-icon>
+					<mat-error>
+						{{ 'hint.mandatory-field' | translate }}
+					</mat-error>
+				</mat-form-field>
+				<mat-form-field>
+					<mat-icon matPrefix>locke</mat-icon>
+					<input
+						matInput
+						type="password"
+						class="form-control"
+						value=""
+						placeholder="{{ 'placeholder.password' | translate }}"
+						formControlName="password"
+						name="password"
+						required
+					/>
+					<mat-error>
+						{{ 'hint.mandatory-field' | translate }}
+					</mat-error>
+				</mat-form-field>
+				<div fxLayout="row-reverse">
+					<button mat-raised-button color="primary" type="submit" [disabled]="!formLogin.valid"><mat-icon>done</mat-icon>Login</button>
+				</div>
+			</form>
+		</mat-card-content>
+	</mat-card>
+</mat-card>
